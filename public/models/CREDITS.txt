@@ -1,0 +1,14 @@
+Cozy PC Parts Kit
+Source: https://grab3d.com/kits/cozy-pc-parts/
+License: CC0 1.0 (public domain) — https://creativecommons.org/publicdomain/zero/1.0/
+
+Files used in the PC builder:
+- cpu.glb
+- cpu-cooler.glb
+- motherboard.glb
+- ram-stick.glb
+- graphics-card.glb
+- hard-drive.glb
+- ssd.glb
+- power-supply-unit.glb
+- pc-case.glb

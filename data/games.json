@@ -1,0 +1,222 @@
+[
+  {
+    "id": "cyberpunk-2077",
+    "name": "Cyberpunk 2077",
+    "cpuDemand": 0.92,
+    "base": {
+      "low": 118,
+      "medium": 86,
+      "high": 64,
+      "ultra": 42
+    }
+  },
+  {
+    "id": "alan-wake-2",
+    "name": "Alan Wake 2",
+    "cpuDemand": 0.88,
+    "base": {
+      "low": 96,
+      "medium": 72,
+      "high": 52,
+      "ultra": 34
+    }
+  },
+  {
+    "id": "black-myth-wukong",
+    "name": "Black Myth: Wukong",
+    "cpuDemand": 0.9,
+    "base": {
+      "low": 102,
+      "medium": 74,
+      "high": 54,
+      "ultra": 36
+    }
+  },
+  {
+    "id": "msfs-2024",
+    "name": "Microsoft Flight Simulator 2024",
+    "cpuDemand": 1.22,
+    "base": {
+      "low": 88,
+      "medium": 64,
+      "high": 46,
+      "ultra": 30
+    }
+  },
+  {
+    "id": "starfield",
+    "name": "Starfield",
+    "cpuDemand": 1.12,
+    "base": {
+      "low": 92,
+      "medium": 68,
+      "high": 50,
+      "ultra": 33
+    }
+  },
+  {
+    "id": "rdr2",
+    "name": "Red Dead Redemption 2",
+    "cpuDemand": 0.86,
+    "base": {
+      "low": 124,
+      "medium": 92,
+      "high": 70,
+      "ultra": 48
+    }
+  },
+  {
+    "id": "hogwarts-legacy",
+    "name": "Hogwarts Legacy",
+    "cpuDemand": 0.94,
+    "base": {
+      "low": 108,
+      "medium": 78,
+      "high": 58,
+      "ultra": 38
+    }
+  },
+  {
+    "id": "tlou-part-1",
+    "name": "The Last of Us Part I",
+    "cpuDemand": 0.9,
+    "base": {
+      "low": 100,
+      "medium": 74,
+      "high": 54,
+      "ultra": 36
+    }
+  },
+  {
+    "id": "avatar-fop",
+    "name": "Avatar: Frontiers of Pandora",
+    "cpuDemand": 0.95,
+    "base": {
+      "low": 94,
+      "medium": 68,
+      "high": 48,
+      "ultra": 31
+    }
+  },
+  {
+    "id": "dragons-dogma-2",
+    "name": "Dragon's Dogma 2",
+    "cpuDemand": 1.08,
+    "base": {
+      "low": 90,
+      "medium": 64,
+      "high": 46,
+      "ultra": 30
+    }
+  },
+  {
+    "id": "stalker-2",
+    "name": "S.T.A.L.K.E.R. 2",
+    "cpuDemand": 0.98,
+    "base": {
+      "low": 98,
+      "medium": 70,
+      "high": 50,
+      "ultra": 32
+    }
+  },
+  {
+    "id": "indiana-jones",
+    "name": "Indiana Jones and the Great Circle",
+    "cpuDemand": 0.93,
+    "base": {
+      "low": 104,
+      "medium": 76,
+      "high": 56,
+      "ultra": 37
+    }
+  },
+  {
+    "id": "monster-hunter-wilds",
+    "name": "Monster Hunter Wilds",
+    "cpuDemand": 1.04,
+    "base": {
+      "low": 96,
+      "medium": 70,
+      "high": 50,
+      "ultra": 33
+    }
+  },
+  {
+    "id": "kcd2",
+    "name": "Kingdom Come: Deliverance II",
+    "cpuDemand": 1.06,
+    "base": {
+      "low": 100,
+      "medium": 72,
+      "high": 52,
+      "ultra": 34
+    }
+  },
+  {
+    "id": "cities-skylines-2",
+    "name": "Cities: Skylines II",
+    "cpuDemand": 1.28,
+    "base": {
+      "low": 82,
+      "medium": 58,
+      "high": 40,
+      "ultra": 26
+    }
+  },
+  {
+    "id": "ark-ascended",
+    "name": "ARK: Survival Ascended",
+    "cpuDemand": 1,
+    "base": {
+      "low": 86,
+      "medium": 60,
+      "high": 42,
+      "ultra": 28
+    }
+  },
+  {
+    "id": "space-marine-2",
+    "name": "Warhammer 40,000: Space Marine 2",
+    "cpuDemand": 0.91,
+    "base": {
+      "low": 112,
+      "medium": 82,
+      "high": 60,
+      "ultra": 40
+    }
+  },
+  {
+    "id": "bg3",
+    "name": "Baldur's Gate 3",
+    "cpuDemand": 0.97,
+    "base": {
+      "low": 120,
+      "medium": 88,
+      "high": 66,
+      "ultra": 44
+    }
+  },
+  {
+    "id": "helldivers-2",
+    "name": "Helldivers 2",
+    "cpuDemand": 0.89,
+    "base": {
+      "low": 130,
+      "medium": 96,
+      "high": 72,
+      "ultra": 50
+    }
+  },
+  {
+    "id": "silent-hill-2",
+    "name": "Silent Hill 2 Remake",
+    "cpuDemand": 0.87,
+    "base": {
+      "low": 106,
+      "medium": 78,
+      "high": 56,
+      "ultra": 36
+    }
+  }
+]

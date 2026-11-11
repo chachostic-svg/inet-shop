@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #172033;
+  --graphite: #14181f;
+  --plate: #e7ebf0;
+  --copper: #c4783a;
+  --signal: #2f6f62;
+  --bg: #f3f5f8;
+  --panel: #ffffff;
+  --line: #c5ccd6;
+  --muted: #5c6674;
+  --danger: #9b2c2c;
+}
+
+.dark {
+  --ink: #e7ebf0;
+  --graphite: #0e1218;
+  --plate: #1c222c;
+  --bg: #14181f;
+  --panel: #1c222c;
+  --line: #2c3440;
+  --muted: #9aa3b0;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-graphite: var(--graphite);
+  --color-plate: var(--plate);
+  --color-copper: var(--copper);
+  --color-signal: var(--signal);
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-onest);
+  --font-display: var(--font-unbounded);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-onest), sans-serif;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  border-radius: 2px;
+}
+
+.display {
+  font-family: var(--font-unbounded), sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.iso-part {
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.iso-part.is-off {
+  opacity: 0;
+  transform: translate(18px, -22px);
+}
+
+.iso-part.is-on {
+  opacity: 1;
+  transform: translate(0, 0);
+}

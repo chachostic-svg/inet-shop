@@ -1,0 +1,549 @@
+[
+  {
+    "id": "cpu-ryzen-7600",
+    "type": "cpu",
+    "brand": "AMD",
+    "name": "Ryzen 5 7600",
+    "price": 3450000,
+    "stock": 11,
+    "socket": "AM5",
+    "tdp": 65,
+    "fpsScore": 78,
+    "color": "#E85D04",
+    "specs": {
+      "cores": 6,
+      "threads": 12
+    },
+    "description": {
+      "ru": "Шестиядерный процессор AM5 для игровых сборок среднего уровня.",
+      "uz": "O‘rtacha o‘yin yig‘malari uchun AM5 olti yadroli protsessor."
+    }
+  },
+  {
+    "id": "cpu-ryzen-7800x3d",
+    "type": "cpu",
+    "brand": "AMD",
+    "name": "Ryzen 7 7800X3D",
+    "price": 6890000,
+    "stock": 5,
+    "socket": "AM5",
+    "tdp": 120,
+    "fpsScore": 96,
+    "color": "#DC2F02",
+    "specs": {
+      "cores": 8,
+      "threads": 16
+    },
+    "description": {
+      "ru": "Флагманский игровой процессор с 3D V-Cache для высоких FPS.",
+      "uz": "Yuqori FPS uchun 3D V-Cache li flagman o‘yin protsessori."
+    }
+  },
+  {
+    "id": "cpu-i5-14600k",
+    "type": "cpu",
+    "brand": "Intel",
+    "name": "Core i5-14600K",
+    "price": 4250000,
+    "stock": 9,
+    "socket": "LGA1700",
+    "tdp": 181,
+    "fpsScore": 82,
+    "color": "#0071C5",
+    "specs": {
+      "cores": 14,
+      "threads": 20
+    },
+    "description": {
+      "ru": "Процессор LGA1700 с высокой частотой для игр и работы.",
+      "uz": "O‘yin va ish uchun yuqori chastotali LGA1700 protsessor."
+    }
+  },
+  {
+    "id": "cpu-i7-14700k",
+    "type": "cpu",
+    "brand": "Intel",
+    "name": "Core i7-14700K",
+    "price": 5790000,
+    "stock": 6,
+    "socket": "LGA1700",
+    "tdp": 253,
+    "fpsScore": 90,
+    "color": "#00A3E0",
+    "specs": {
+      "cores": 20,
+      "threads": 28
+    },
+    "description": {
+      "ru": "Мощный Intel для тяжёлых игр и стриминга.",
+      "uz": "Og‘ir o‘yinlar va striming uchun kuchli Intel."
+    }
+  },
+  {
+    "id": "mb-msi-b650",
+    "type": "motherboard",
+    "brand": "MSI",
+    "name": "MAG B650 Tomahawk WiFi",
+    "price": 2890000,
+    "stock": 10,
+    "socket": "AM5",
+    "ramType": "DDR5",
+    "formFactor": "ATX",
+    "ramSlots": 4,
+    "color": "#2F6F62",
+    "specs": {
+      "chipset": "B650"
+    },
+    "description": {
+      "ru": "Плата AM5 ATX с Wi-Fi и четырьмя слотами DDR5.",
+      "uz": "Wi-Fi va to‘rtta DDR5 slotli AM5 ATX plata."
+    }
+  },
+  {
+    "id": "mb-asrock-b650m",
+    "type": "motherboard",
+    "brand": "ASRock",
+    "name": "B650M Pro RS",
+    "price": 1980000,
+    "stock": 10,
+    "socket": "AM5",
+    "ramType": "DDR5",
+    "formFactor": "mATX",
+    "ramSlots": 4,
+    "color": "#3D5A80",
+    "specs": {
+      "chipset": "B650"
+    },
+    "description": {
+      "ru": "Компактная mATX плата AM5 для небольших корпусов.",
+      "uz": "Kichik korpuslar uchun ixcham AM5 mATX plata."
+    }
+  },
+  {
+    "id": "mb-gigabyte-b760",
+    "type": "motherboard",
+    "brand": "Gigabyte",
+    "name": "B760 Gaming X AX",
+    "price": 2450000,
+    "stock": 8,
+    "socket": "LGA1700",
+    "ramType": "DDR5",
+    "formFactor": "ATX",
+    "ramSlots": 4,
+    "color": "#1B4332",
+    "specs": {
+      "chipset": "B760"
+    },
+    "description": {
+      "ru": "Плата Intel LGA1700 ATX с DDR5 и Wi-Fi.",
+      "uz": "DDR5 va Wi-Fi li Intel LGA1700 ATX plata."
+    }
+  },
+  {
+    "id": "mb-msi-z790",
+    "type": "motherboard",
+    "brand": "MSI",
+    "name": "MPG Z790 Edge Ti Max",
+    "price": 4120000,
+    "stock": 5,
+    "socket": "LGA1700",
+    "ramType": "DDR5",
+    "formFactor": "ATX",
+    "ramSlots": 4,
+    "color": "#0B525B",
+    "specs": {
+      "chipset": "Z790"
+    },
+    "description": {
+      "ru": "Топовый чипсет Z790 для разгона Core K-серии.",
+      "uz": "Core K seriyasini overclock qilish uchun Z790 chipset."
+    }
+  },
+  {
+    "id": "ram-kingston-8",
+    "type": "ram",
+    "brand": "Kingston",
+    "name": "Fury Beast 8GB DDR5-5600",
+    "price": 620000,
+    "stock": 20,
+    "ramType": "DDR5",
+    "capacityGb": 8,
+    "sticks": 1,
+    "color": "#22223B",
+    "specs": {
+      "speed": "5600"
+    },
+    "description": {
+      "ru": "Одна планка 8 ГБ. Для игр лучше взять комплект 16 ГБ и больше.",
+      "uz": "Bitta 8 GB planka. O‘yinlar uchun 16 GB va undan ko‘p tavsiya etiladi."
+    }
+  },
+  {
+    "id": "ram-kingston-16",
+    "type": "ram",
+    "brand": "Kingston",
+    "name": "Fury Beast 16GB (2x8) DDR5-6000",
+    "price": 1180000,
+    "stock": 18,
+    "ramType": "DDR5",
+    "capacityGb": 16,
+    "sticks": 2,
+    "color": "#4A4E69",
+    "specs": {
+      "speed": "6000"
+    },
+    "description": {
+      "ru": "Базовый игровой комплект DDR5 16 ГБ.",
+      "uz": "Asosiy o‘yin uchun 16 GB DDR5 to‘plami."
+    }
+  },
+  {
+    "id": "ram-kingston-32",
+    "type": "ram",
+    "brand": "Kingston",
+    "name": "Fury Beast 32GB (2x16) DDR5-6000",
+    "price": 2140000,
+    "stock": 14,
+    "ramType": "DDR5",
+    "capacityGb": 32,
+    "sticks": 2,
+    "color": "#9A8C98",
+    "specs": {
+      "speed": "6000"
+    },
+    "description": {
+      "ru": "32 ГБ для тяжёлых игр, стрима и вкладок браузера.",
+      "uz": "Og‘ir o‘yinlar, strim va brauzer uchun 32 GB."
+    }
+  },
+  {
+    "id": "ram-corsair-32",
+    "type": "ram",
+    "brand": "Corsair",
+    "name": "Vengeance 32GB (2x16) DDR5-6400",
+    "price": 2480000,
+    "stock": 8,
+    "ramType": "DDR5",
+    "capacityGb": 32,
+    "sticks": 2,
+    "color": "#C9ADA7",
+    "specs": {
+      "speed": "6400"
+    },
+    "description": {
+      "ru": "Быстрая DDR5 6400 для AM5 и свежих плат Intel.",
+      "uz": "AM5 va yangi Intel platalar uchun tez DDR5 6400."
+    }
+  },
+  {
+    "id": "cooler-ak400",
+    "type": "cooler",
+    "brand": "DeepCool",
+    "name": "AK400 Digital",
+    "price": 540000,
+    "stock": 15,
+    "sockets": [
+      "AM5",
+      "LGA1700"
+    ],
+    "heightMm": 155,
+    "tdp": 220,
+    "color": "#CED4DA",
+    "specs": {
+      "fans": 1
+    },
+    "description": {
+      "ru": "Башенный кулер для обоих сокетов, высота 155 мм.",
+      "uz": "Ikkala soket uchun minora sovutgich, balandligi 155 mm."
+    }
+  },
+  {
+    "id": "cooler-nhd15",
+    "type": "cooler",
+    "brand": "Noctua",
+    "name": "NH-D15 chromax.black",
+    "price": 1680000,
+    "stock": 6,
+    "sockets": [
+      "AM5",
+      "LGA1700"
+    ],
+    "heightMm": 165,
+    "tdp": 280,
+    "color": "#212529",
+    "specs": {
+      "fans": 2
+    },
+    "description": {
+      "ru": "Двухбашенный кулер для горячих процессоров.",
+      "uz": "Issiq protsessorlar uchun ikki minorali sovutgich."
+    }
+  },
+  {
+    "id": "cooler-amd-wraith",
+    "type": "cooler",
+    "brand": "AMD",
+    "name": "Wraith Stealth",
+    "price": 180000,
+    "stock": 22,
+    "sockets": [
+      "AM5"
+    ],
+    "heightMm": 70,
+    "tdp": 105,
+    "color": "#6C757D",
+    "specs": {
+      "fans": 1
+    },
+    "description": {
+      "ru": "Комплектный низкий кулер AMD. Для 7800X3D запас TDP мал.",
+      "uz": "AMD ning past sovutgichi. 7800X3D uchun TDP zaxirasi kam."
+    }
+  },
+  {
+    "id": "gpu-rtx-4060",
+    "type": "gpu",
+    "brand": "NVIDIA",
+    "name": "GeForce RTX 4060 8GB",
+    "price": 4890000,
+    "stock": 9,
+    "lengthMm": 244,
+    "tdp": 115,
+    "fpsScore": 62,
+    "color": "#76B900",
+    "specs": {
+      "vram": "8 GB"
+    },
+    "description": {
+      "ru": "Карта для Full HD: комфортные средние и высокие настройки.",
+      "uz": "Full HD uchun karta: o‘rta va yuqori sozlamalar qulay."
+    }
+  },
+  {
+    "id": "gpu-rtx-4070s",
+    "type": "gpu",
+    "brand": "NVIDIA",
+    "name": "GeForce RTX 4070 SUPER 12GB",
+    "price": 8920000,
+    "stock": 6,
+    "lengthMm": 304,
+    "tdp": 220,
+    "fpsScore": 88,
+    "color": "#A5D631",
+    "specs": {
+      "vram": "12 GB"
+    },
+    "description": {
+      "ru": "Сильная карта 1080p/1440p с запасом по ультра.",
+      "uz": "Ultra uchun zaxirali kuchli 1080p/1440p karta."
+    }
+  },
+  {
+    "id": "gpu-rtx-4080s",
+    "type": "gpu",
+    "brand": "NVIDIA",
+    "name": "GeForce RTX 4080 SUPER 16GB",
+    "price": 14990000,
+    "stock": 3,
+    "lengthMm": 310,
+    "tdp": 320,
+    "fpsScore": 108,
+    "color": "#C8F542",
+    "specs": {
+      "vram": "16 GB"
+    },
+    "description": {
+      "ru": "Тяжёлые игры на ультра в Full HD с большим запасом.",
+      "uz": "Full HD ultra og‘ir o‘yinlar uchun katta zaxira."
+    }
+  },
+  {
+    "id": "gpu-rx-7800xt",
+    "type": "gpu",
+    "brand": "AMD",
+    "name": "Radeon RX 7800 XT 16GB",
+    "price": 7650000,
+    "stock": 5,
+    "lengthMm": 267,
+    "tdp": 263,
+    "fpsScore": 86,
+    "color": "#ED1C24",
+    "specs": {
+      "vram": "16 GB"
+    },
+    "description": {
+      "ru": "16 ГБ видеопамяти и высокая растеризация в Full HD.",
+      "uz": "16 GB video xotira va Full HD da yuqori rasterizatsiya."
+    }
+  },
+  {
+    "id": "ssd-kingston-1tb",
+    "type": "storage",
+    "brand": "Kingston",
+    "name": "NV2 1TB NVMe",
+    "price": 890000,
+    "stock": 24,
+    "interface": "nvme",
+    "color": "#495057",
+    "specs": {
+      "capacity": "1 TB"
+    },
+    "description": {
+      "ru": "Быстрый NVMe для системы и игр.",
+      "uz": "Tizim va o‘yinlar uchun tez NVMe."
+    }
+  },
+  {
+    "id": "ssd-samsung-2tb",
+    "type": "storage",
+    "brand": "Samsung",
+    "name": "990 EVO 2TB NVMe",
+    "price": 1980000,
+    "stock": 7,
+    "interface": "nvme",
+    "color": "#343A40",
+    "specs": {
+      "capacity": "2 TB"
+    },
+    "description": {
+      "ru": "Два терабайта под большую библиотеку игр.",
+      "uz": "Katta o‘yin kutubxonasi uchun 2 TB."
+    }
+  },
+  {
+    "id": "hdd-wd-1tb",
+    "type": "storage",
+    "brand": "WD",
+    "name": "Blue 1TB SATA SSD",
+    "price": 720000,
+    "stock": 15,
+    "interface": "sata",
+    "color": "#1D3557",
+    "specs": {
+      "capacity": "1 TB"
+    },
+    "description": {
+      "ru": "SATA SSD для архива и дополнительных игр.",
+      "uz": "Arxiv va qo‘shimcha o‘yinlar uchun SATA SSD."
+    }
+  },
+  {
+    "id": "psu-corsair-650",
+    "type": "psu",
+    "brand": "Corsair",
+    "name": "CV650 650W 80+ Bronze",
+    "price": 890000,
+    "stock": 11,
+    "wattage": 650,
+    "psuForm": "ATX",
+    "color": "#212529",
+    "specs": {
+      "cert": "80+ Bronze"
+    },
+    "description": {
+      "ru": "Блок 650 Вт для сборок с RTX 4060 и близкими картами.",
+      "uz": "RTX 4060 va yaqin kartalar uchun 650 W blok."
+    }
+  },
+  {
+    "id": "psu-seasonic-850",
+    "type": "psu",
+    "brand": "Seasonic",
+    "name": "Focus GX-850 850W 80+ Gold",
+    "price": 1780000,
+    "stock": 7,
+    "wattage": 850,
+    "psuForm": "ATX",
+    "color": "#111827",
+    "specs": {
+      "cert": "80+ Gold"
+    },
+    "description": {
+      "ru": "Запас по питанию для 4070 SUPER и RX 7800 XT.",
+      "uz": "4070 SUPER va RX 7800 XT uchun quvvat zaxirasi."
+    }
+  },
+  {
+    "id": "psu-bequiet-1000",
+    "type": "psu",
+    "brand": "be quiet!",
+    "name": "Straight Power 12 1000W",
+    "price": 2650000,
+    "stock": 4,
+    "wattage": 1000,
+    "psuForm": "ATX",
+    "color": "#0F172A",
+    "specs": {
+      "cert": "80+ Platinum"
+    },
+    "description": {
+      "ru": "1000 Вт для RTX 4080 SUPER и горячих процессоров.",
+      "uz": "RTX 4080 SUPER va issiq protsessorlar uchun 1000 W."
+    }
+  },
+  {
+    "id": "case-fractal-meshify",
+    "type": "case",
+    "brand": "Fractal",
+    "name": "Meshify 2 Compact",
+    "price": 1680000,
+    "stock": 8,
+    "formFactors": [
+      "ATX",
+      "mATX"
+    ],
+    "gpuMaxMm": 360,
+    "coolerMaxMm": 169,
+    "color": "#1A1D21",
+    "specs": {
+      "side": "tempered glass"
+    },
+    "description": {
+      "ru": "ATX корпус: видеокарта до 360 мм, кулер до 169 мм.",
+      "uz": "ATX korpus: videokarta 360 mm gacha, sovutgich 169 mm gacha."
+    }
+  },
+  {
+    "id": "case-deepcool-cc360",
+    "type": "case",
+    "brand": "DeepCool",
+    "name": "CH360 Digital",
+    "price": 980000,
+    "stock": 11,
+    "formFactors": [
+      "mATX"
+    ],
+    "gpuMaxMm": 320,
+    "coolerMaxMm": 165,
+    "color": "#252A31",
+    "specs": {
+      "side": "tempered glass"
+    },
+    "description": {
+      "ru": "mATX корпус. Полноразмерная ATX плата сюда не встанет.",
+      "uz": "mATX korpus. To‘liq ATX plata bu yerga sig‘maydi."
+    }
+  },
+  {
+    "id": "case-lianli-lancool",
+    "type": "case",
+    "brand": "Lian Li",
+    "name": "Lancool 216",
+    "price": 1540000,
+    "stock": 6,
+    "formFactors": [
+      "ATX",
+      "mATX"
+    ],
+    "gpuMaxMm": 392,
+    "coolerMaxMm": 180,
+    "color": "#2B2F36",
+    "specs": {
+      "side": "tempered glass"
+    },
+    "description": {
+      "ru": "Просторный корпус под длинные видеокарты и высокие кулеры.",
+      "uz": "Uzun videokarta va baland sovutgichlar uchun keng korpus."
+    }
+  }
+]
