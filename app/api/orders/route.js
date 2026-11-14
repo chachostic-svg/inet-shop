@@ -28,7 +28,8 @@ export async function POST(request) {
   const phone = String(form.get("phone") || "").trim();
   const city = String(form.get("city") || "").trim();
   const items = parseItems(form.get("items"));
-  const paymentMethod = ["payme", "click", "card"].includes(String(form.get("paymentMethod")))
+  const wantsStripe = String(form.get("paymentMethod")) === "stripe";
+  const paymentMethod = ["payme", "click", "card", "stripe"].includes(String(form.get("paymentMethod")))
     ? String(form.get("paymentMethod"))
     : "";
   const paymentRef = String(form.get("paymentRef") || "").trim();
@@ -39,12 +40,18 @@ export async function POST(request) {
     build = null;
   }
 
-  const receipt = await readReceiptFile(form.get("receipt"));
-  if (receipt.error) {
-    return NextResponse.json({ error: receipt.error }, { status: 400 });
+  let receipt = null;
+  if (!wantsStripe) {
+    receipt = await readReceiptFile(form.get("receipt"));
+    if (receipt.error) {
+      return NextResponse.json({ error: receipt.error }, { status: 400 });
+    }
   }
 
-  if (!name || !city || !/^\+998[0-9]{9}$/.test(phone) || items.length === 0 || !paymentMethod || paymentRef.length < 3) {
+  if (!name || !city || !/^\+998[0-9]{9}$/.test(phone) || items.length === 0 || !paymentMethod) {
+    return NextResponse.json({ error: "invalid" }, { status: 400 });
+  }
+  if (!wantsStripe && paymentRef.length < 3) {
     return NextResponse.json({ error: "invalid" }, { status: 400 });
   }
 
@@ -78,11 +85,19 @@ export async function POST(request) {
     total: normalized.reduce((sum, item) => sum + item.price * item.qty, 0),
     status: "pending",
     paymentMethod,
-    paymentRef,
+    paymentRef: wantsStripe ? null : paymentRef,
     receiptImage: null,
     telegramMessageId: null,
     telegramKind: "text",
   };
+
+  if (wantsStripe) {
+    const orders = await getOrders();
+    orders.push(order);
+    await saveProducts(products);
+    await saveOrders(orders);
+    return NextResponse.json({ id: order.id, stripe: true });
+  }
 
   order.receiptImage = await saveReceiptFile(order.id, receipt.buffer, receipt.ext);
 

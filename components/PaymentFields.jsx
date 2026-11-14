@@ -5,7 +5,7 @@ import { formatPrice } from "@/lib/money";
 import { formatCard } from "@/lib/payment";
 import { useI18n } from "./I18nProvider";
 
-const METHODS = ["payme", "click", "card"];
+const BASE_METHODS = ["payme", "click", "card"];
 
 export default function PaymentFields({
   total,
@@ -16,10 +16,13 @@ export default function PaymentFields({
   onPaymentRef,
   receiptFile,
   onReceiptFile,
+  stripeEnabled = false,
 }) {
   const { t, locale } = useI18n();
   const [copied, setCopied] = useState("");
   const [preview, setPreview] = useState("");
+  const methods = stripeEnabled ? [...BASE_METHODS, "stripe"] : BASE_METHODS;
+  const isStripe = method === "stripe";
   const card = formatCard(requisites.card);
   const phone = requisites.phone;
 
@@ -48,7 +51,7 @@ export default function PaymentFields({
       </p>
       <p className="text-sm text-muted">{t("checkout.payMethod")}</p>
       <div className="flex flex-wrap gap-2">
-        {METHODS.map((id) => (
+        {methods.map((id) => (
           <label
             key={id}
             className={`cursor-pointer border px-3 py-2 text-sm ${
@@ -67,6 +70,10 @@ export default function PaymentFields({
           </label>
         ))}
       </div>
+      {isStripe ? (
+        <p className="text-sm text-muted">{t("checkout.stripeNote")}</p>
+      ) : (
+        <>
       {card ? (
         <div>
           <p className="text-sm text-muted">{t("checkout.payCard")}</p>
@@ -117,6 +124,8 @@ export default function PaymentFields({
       </label>
       {preview && (
         <img src={preview} alt="" className="max-h-48 w-full border border-line object-contain" />
+      )}
+        </>
       )}
     </fieldset>
   );

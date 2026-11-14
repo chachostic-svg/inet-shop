@@ -8,7 +8,7 @@ import { useI18n } from "./I18nProvider";
 import { useShop } from "./ShopProvider";
 import PaymentFields from "./PaymentFields";
 
-export default function CheckoutForm({ products, requisites = { card: "", phone: "" } }) {
+export default function CheckoutForm({ products, requisites = { card: "", phone: "" }, stripeEnabled = false }) {
   const { t, locale } = useI18n();
   const { cart, slots, clearCart } = useShop();
   const params = useSearchParams();
@@ -18,6 +18,7 @@ export default function CheckoutForm({ products, requisites = { card: "", phone:
   const [phone, setPhone] = useState("+998");
   const [city, setCity] = useState("");
   const [method, setMethod] = useState("payme");
+  const isStripe = method === "stripe";
   const [paymentRef, setPaymentRef] = useState("");
   const [receiptFile, setReceiptFile] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -48,7 +49,7 @@ export default function CheckoutForm({ products, requisites = { card: "", phone:
   async function onSubmit(event) {
     event.preventDefault();
     if (blocked || items.length === 0) return;
-    if (!receiptFile) {
+    if (!isStripe && !receiptFile) {
       setError(t("checkout.receiptNeed"));
       return;
     }
@@ -61,14 +62,33 @@ export default function CheckoutForm({ products, requisites = { card: "", phone:
     payload.append("items", JSON.stringify(items));
     payload.append("build", JSON.stringify(fromBuild ? slots : null));
     payload.append("paymentMethod", method);
-    payload.append("paymentRef", paymentRef);
-    payload.append("receipt", receiptFile);
+    if (!isStripe) {
+      payload.append("paymentRef", paymentRef);
+      payload.append("receipt", receiptFile);
+    }
     const res = await fetch("/api/orders", {
       method: "POST",
       body: payload,
     });
     const data = await res.json();
     setBusy(false);
+    if (res.ok && data.stripe) {
+      const checkout = await fetch("/api/stripe/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: data.id }),
+      });
+      const session = await checkout.json();
+      if (checkout.ok && session.url) {
+        if (!fromBuild) clearCart();
+        window.location.assign(session.url);
+        return;
+      }
+      setBusy(false);
+      setError(t("checkout.stripeError"));
+      if (data.id) router.push(`/order/${data.id}`);
+      return;
+    }
     if (!res.ok) {
       const errors = {
         telegram_not_configured: t("checkout.telegramWarn"),
@@ -143,6 +163,7 @@ export default function CheckoutForm({ products, requisites = { card: "", phone:
           onPaymentRef={setPaymentRef}
           receiptFile={receiptFile}
           onReceiptFile={setReceiptFile}
+          stripeEnabled={stripeEnabled}
         />
         <p className="text-xs text-muted">{t("checkout.hint")}</p>
         {error && <p className="text-sm text-danger">{error}</p>}
@@ -151,7 +172,7 @@ export default function CheckoutForm({ products, requisites = { card: "", phone:
           disabled={busy || blocked || items.length === 0}
           className="bg-copper px-4 py-2 text-white disabled:opacity-40"
         >
-          {busy ? t("checkout.sending") : t("checkout.submit")}
+          {busy ? t("checkout.sending") : isStripe ? t("order.stripePay") : t("checkout.submit")}
         </button>
       </form>
     </div>

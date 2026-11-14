@@ -52,3 +52,6 @@ next-env.d.ts
 
 # legacy orders export (lives in Neon Postgres; may contain personal data)
 /data/orders.json
+
+.vercel
+.env*
